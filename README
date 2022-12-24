@@ -1,3 +1,3 @@
 # Installation
 
-* dp
+* Set FONTAWESOME_NPM_AUTH_TOKEN in env for npmrc.
