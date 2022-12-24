@@ -1,0 +1,45 @@
+// {
+//     "files": ["packages/glowystuff-web/typings.d.ts"],
+//     "compilerOptions": {
+//       
+//       
+//       
+//       
+//       
+//       
+//      
+//       
+//       
+//       
+//       
+//       
+//     },
+//    
+//   }
+{
+    "exclude": ["storybook-static", "lib", "src/*.stories.tsx"],
+    "include": ["src"],
+    "files": ["./typings.d.ts"],
+    "compilerOptions": {
+      "allowJs": true,
+      "baseUrl": "src",
+      "declaration": true,
+      "declarationMap": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "jsx": "react",
+      "lib": ["dom", "es2019"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmit": false,
+      "noUnusedLocals": false,
+      "outDir": "lib",
+      "skipLibCheck": true,
+      "target": "es2019", // https://github.com/TypeStrong/ts-node/issues/903#issuecomment-594684897
+      "sourceMap": true,
+      "strict": true,
+      "strictNullChecks": true
+    },
+  }
+  

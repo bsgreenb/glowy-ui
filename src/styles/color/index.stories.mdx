@@ -1,0 +1,38 @@
+import { Meta, ColorItem, ColorPalette } from "@storybook/addon-docs/blocks";
+import { brandColor, backgroundColor, grayScale, color } from "./";
+import FontColorDemo from "../typography/demos/FontColorDemo";
+
+<Meta
+  title="Styles / Color"
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Greens"
+    subtitle="Brand/Interactive/Success"
+    colors={Object.values(brandColor)}
+  />
+  <ColorItem
+    title="Oranges"
+    subtitle="Warning"
+    colors={[color.orange, color.orangeVariant]}
+  />
+  <ColorItem
+    title="Reds"
+    subtitle="Errors"
+    colors={[color.red, color.redVariant]}
+  />
+  <ColorItem title="Grayscale" colors={grayScale} />
+  <ColorItem
+    title="Backgrounds"
+    subtitle=""
+    colors={Object.values(backgroundColor)}
+  />
+</ColorPalette>
+
+# Font Colors
+
+<FontColorDemo />

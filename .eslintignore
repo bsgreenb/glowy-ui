@@ -1,0 +1,8 @@
+# https://github.com/storybookjs/storybook/issues/295#issuecomment-340122758
+# Don't ignore storybook
+!.storybook
+
+# But do ignore the static build
+storybook-static/
+
+lib/**

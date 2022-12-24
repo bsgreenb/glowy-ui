@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables file
+.env
+# yarn how we're doing it
+.yarnrc.yml
+
+## npm
+# Dependency directories
+node_modules/
+# Optional npm cache directory
+.npm
+# Output of 'npm pack'
+*.tgz
+
+# Storybook build
+storybook-static/
+lib/
