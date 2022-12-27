@@ -29,7 +29,7 @@ module.exports = {
 
     const rules = config?.module?.rules?.[0];
 
-    if (rules && rules != "...") {
+    if (rules) {
       rules.exclude = [/node_modules\/(?!(gatsby)\/)/];
     }
 
