@@ -16,3 +16,6 @@ declare module "gatsby-source-contentful/rich-text" {
 declare module "*.ttf";
 declare module "*.woff";
 declare module "*.woff2";
+
+// Moved from .storybook/preview after converted to js
+declare const window: { ___navigate: (pathname: string) => void };
