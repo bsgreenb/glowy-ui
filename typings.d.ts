@@ -1,6 +1,3 @@
-
-
-
 // This is a hack https://github.com/storybookjs/storybook/issues/11684#issuecomment-67473146
 
 // Want to eventually remove, once react-syntax-highlighter gets their shit together.
