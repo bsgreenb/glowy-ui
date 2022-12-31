@@ -9,7 +9,7 @@
     "module": "./lib/index.js",
     "dependencies": {
         "@babel/core": "^7.9.0",
-        "@contentful/rich-text-react-renderer": "^14.1.1",
+        "@contentful/rich-text-react-renderer": "^15.16.2",
         "@fortawesome/fontawesome-pro": "^5.15.1",
         "@fortawesome/fontawesome-svg-core": "1.2.32",
         "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -31,12 +31,11 @@
         "ts-node-dev": "^2.0.0"
     },
     "devDependencies": {
-        "@contentful/rich-text-types": "^14.1.1",
+        "@contentful/rich-text-types": "^16.0.2",
         "@mdx-js/react": "^1.6.22",
         "@storybook/addon-a11y": "^6.5.15",
         "@storybook/addon-essentials": "^6.5.15",
         "@storybook/addon-links": "^6.5.15",
-        "@storybook/addon-viewport": "^6.5.15",
         "@storybook/addons": "^6.5.15",
         "@storybook/builder-webpack5": "^6.5.15",
         "@storybook/cli": "^6.5.15",
