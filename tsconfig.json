@@ -1,21 +1,3 @@
-// {
-//     "files": ["packages/glowystuff-web/typings.d.ts"],
-//     "compilerOptions": {
-//       
-//       
-//       
-//       
-//       
-//       
-//      
-//       
-//       
-//       
-//       
-//       
-//     },
-//    
-//   }
 {
     "exclude": ["storybook-static", "lib", "src/*.stories.tsx"],
     "include": ["src"],

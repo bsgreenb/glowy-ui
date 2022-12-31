@@ -2,10 +2,24 @@ import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { DocsContainer } from "@storybook/addon-docs/blocks";
-import H, { HeadingProps } from "../src/components/content/Heading";
+import H from "../src/components/content/Heading";
 import viewports from "./viewports";
 import { createGlobalStyle } from "styled-components";
 import GlobalStyle from "../src/styles/GlobalStyle";
+
+// Gatsby's Link overrides:
+// Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
+// This global object isn't set in storybook context, requiring you to override it to empty functions (no-op),
+// so Gatsby Link doesn't throw errors.
+global.___loader = {
+  enqueue: () => {},
+  hovering: () => {},
+}
+// This global variable prevents the "__BASE_PATH__ is not defined" error inside Storybook.
+global.__BASE_PATH__ = "/"
+
+// Navigating through a gatsby app using gatsby-link or any other gatsby component will use the `___navigate` method.
+// In Storybook, it makes more sense to log an action than doing an actual navigate. Check out the actions addon docs for more info: https://storybook.js.org/docs/react/essentials/actions
 
 // TODO: fix the Docs headings.
 
@@ -37,10 +51,9 @@ const WrappedContainer = ({ children, context }) => (
   </DocsContainer>
 );
 
-type StorybookHeadingProps = Pick<HeadingProps, "level" | "children">;
-const StorybookHeading = ({ level, children }: StorybookHeadingProps) => {
+const StorybookHeading = ({ level, children }) => {
   return (
-    <H level={level} size={("h" + level) as HeadingProps["size"]} bottomMargin>
+    <H level={level} size={"h" + level} bottomMargin>
       {children}
     </H>
   );
@@ -87,9 +100,7 @@ addDecorator((story) => (
   </>
 ));
 
-declare const window: { ___navigate: (pathname: string) => void };
-
 // This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
-window.___navigate = (pathname: string) => {
+window.___navigate = (pathname) => {
   action("NavigateTo:")(pathname);
 };
