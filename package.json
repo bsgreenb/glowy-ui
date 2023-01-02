@@ -23,7 +23,6 @@
         "gatsby-background-image": "^1.1.1",
         "gatsby-image": "^2.3.1",
         "gatsby-plugin-google-analytics": "^2.3.13",
-        "graphql": "^16.6.0",
         "http-server": "^14.1.1",
         "react-scrollspy": "^3.4.3",
         "react-stickynode": "^4.1.0",
