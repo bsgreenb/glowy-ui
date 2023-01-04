@@ -1,5 +1,5 @@
 import React from "react";
-import Img, { GatsbyImageFixedProps } from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Grid from "../../layout/Grid";
 import GridItem from "../../layout/Grid/GridItem";
 import Text from "../Text";
@@ -7,7 +7,9 @@ import Text from "../Text";
 type BylineProps = {
   author: {
     name: string;
-    photo: GatsbyImageFixedProps;
+    photo: {
+      gatsbyImageData: IGatsbyImageData;
+    };
   };
   updatedAt: string;
   preview: boolean;
@@ -19,9 +21,9 @@ type BylineProps = {
 const Byline = ({ author, updatedAt, preview }: BylineProps) => (
   <Grid wrap="nowrap" gap="xs" alignItems="center">
     <GridItem xs="auto">
-      <Img
+      <GatsbyImage
+        image={author.photo.gatsbyImageData}
         style={{ borderRadius: "50%", display: "block" }}
-        fixed={author.photo.fixed}
         alt={author.name}
       />
     </GridItem>

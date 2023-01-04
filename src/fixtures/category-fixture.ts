@@ -1,20 +1,30 @@
+import { Layout } from "gatsby-plugin-image";
+// TODO: update this to proper category image from query
 const categoryFixture = {
-  title: "Wearables",
-  slug: "wearables",
+  title: "Classic LED Hoops",
+  slug: "classic-led-hoops",
   featuredImage: {
-    fluid: {
-      base64:
-        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAgJAv/EACcQAAEDBAAEBwEAAAAAAAAAAAECAwQABREhBwgiMQYSE0FCUXKB/8QAFAEBAAAAAAAAAAAAAAAAAAAABv/EACARAAEDBAIDAAAAAAAAAAAAAAEAAgMEBREhFDJxwdH/2gAMAwEAAhEDEQA/AJjXG5JmQorIQoKZGPMTr+Cqf8jviK127libgPek3IkW6WrKkk9QefBBH5wc+2RsbqWSu9O1w4uku1cHohiPqjkWR49Gvhnf32FLbHTcyWRzj1b7HxHr1PNTwsEBwS7fjB0kkeGHljIOFHYOQd0ViijCQr//2Q==",
-      aspectRatio: 1.7777777777777777,
-      src:
-        "//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=500&q=50",
-      srcSet:
-        "//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=125&h=70&q=50 125w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=250&h=141&q=50 250w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=500&h=281&q=50 500w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=750&h=422&q=50 750w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=1000&h=563&q=50 1000w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=1500&h=844&q=50 1500w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=3648&h=2052&q=50 3648w",
-      srcWebp:
-        "//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=500&q=50&fm=webp",
-      srcSetWebp:
-        "//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=125&h=70&q=50&fm=webp 125w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=250&h=141&q=50&fm=webp 250w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=500&h=281&q=50&fm=webp 500w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=750&h=422&q=50&fm=webp 750w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=1000&h=563&q=50&fm=webp 1000w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=1500&h=844&q=50&fm=webp 1500w,\n//images.ctfassets.net/recq25x3mcro/6y6jioA1m1jlftcGX1sOsE/980563c6079bc51a87bd3b631e192d77/LED_dress_by_Hussein_Chalayan.jpg?w=3648&h=2052&q=50&fm=webp 3648w",
-      sizes: "(max-width: 500px) 100vw, 500px",
+    gatsbyImageData: {
+      images: {
+        sources: [
+          {
+            srcSet:
+              "https://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=150&h=150&q=50&fm=webp 150w,\nhttps://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=300&h=300&q=50&fm=webp 300w,\nhttps://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=600&h=600&q=50&fm=webp 600w",
+            sizes: "(min-width: 600px) 600px, 100vw",
+            type: "image/webp",
+          },
+        ],
+        fallback: {
+          src: "https://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=600&h=600&fl=progressive&q=50&fm=jpg",
+          srcSet:
+            "https://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=150&h=150&fl=progressive&q=50&fm=jpg 150w,\nhttps://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=300&h=300&fl=progressive&q=50&fm=jpg 300w,\nhttps://images.ctfassets.net/recq25x3mcro/2aoufSI4Ja99Vgi5wHbbwB/0d6b68aad771bc6b8072535546a72edf/square_led_hoop.jpg?w=600&h=600&fl=progressive&q=50&fm=jpg 600w",
+          sizes: "(min-width: 600px) 600px, 100vw",
+        },
+      },
+      layout: "constrained",
+      backgroundColor: "#080808",
+      width: 600,
+      height: 600,
     },
   },
 };

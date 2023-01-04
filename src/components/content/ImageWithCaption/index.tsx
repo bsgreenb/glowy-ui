@@ -1,13 +1,12 @@
-import { GatsbyImageFluidProps } from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import React, { ReactNode } from "react";
 import Grid from "../../layout/Grid";
 import GridItem from "../../layout/Grid/GridItem";
 import Text from "../Text";
-import Img from "gatsby-image";
 import ExternalLink from "../../navigation/ExternalLink";
 
 type ImageWithCaptionProps = {
-  image: GatsbyImageFluidProps;
+  image: { gatsbyImageData: IGatsbyImageData };
   caption: string;
   photoCredit?: string;
   photoCreditUrl?: string;
@@ -42,11 +41,11 @@ const ImageWithCaption = ({
       );
     }
   }
-
+  // TODO: dynamic alt
   return (
     <Grid gap="xs">
       <GridItem xs={12}>
-        <Img fluid={image.fluid} />
+        <GatsbyImage alt="" image={image.gatsbyImageData} />
       </GridItem>
       <GridItem xs={12}>
         <Text size="small" textAlign="center">

@@ -1,16 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GatsbyImageFixedProps, GatsbyImageFluidProps } from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import { color } from "../../../styles/color";
 import { fontSize } from "../../../styles/typography";
 import Grid from "../../layout/Grid";
 import GridItem from "../../layout/Grid/GridItem";
-import Img from "gatsby-image";
-
-type FluidAndFixedImage = GatsbyImageFluidProps & GatsbyImageFixedProps;
 
 type ImageCarouselProps = {
-  images: FluidAndFixedImage[];
+  images: { gatsbyImageData: IGatsbyImageData }[];
   setSelectedImageIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
@@ -65,6 +62,7 @@ const ImageCarousel = ({
       {/* TODO: get alts in here, check how we did alts elsewhere for consistency.  title make */}
       {images.map((image, i) => {
         const showImage = i >= startIndex && i < endIndex;
+        // TODO: add dynamic alt on GatsbyImage
         return (
           <GridItem
             style={{
@@ -75,7 +73,7 @@ const ImageCarousel = ({
             onEnter={imageSelect(i)}
             onLeave={imageDeselect}
           >
-            <Img fixed={image.fixed} />
+            <GatsbyImage alt="" image={image.gatsbyImageData} />
           </GridItem>
         );
       })}
