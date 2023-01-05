@@ -7,7 +7,7 @@ import postFixture from "../../../fixtures/post-fixture";
 import productFixture from "../../../fixtures/product-fixture";
 import Text from "../../content/Text";
 import BoxBody from "./BoxBody";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { CategoryBadge } from "../../content/Badge/index.stories";
 import H from "../../content/Heading";
 import { PostImageBox } from "../../content/ImageBox/index.stories";
@@ -38,7 +38,7 @@ export const ProductCard = ({
         <Hidden min="lg">
           <Grid direction="column" gap="md" wrap="nowrap" fullHeight>
             <GridItem>
-              <Img alt={title} fluid={featuredImage.fluid} />
+              <GatsbyImage image={featuredImage.gatsbyImageData} alt={title} />
             </GridItem>
             <GridItem>
               <H level={3} size="h4">
@@ -61,7 +61,7 @@ export const ProductCard = ({
         <Hidden max="lg">
           <Grid fullHeight>
             <GridItem xs={5}>
-              <Img alt={title} fluid={featuredImage.fluid} />
+              <GatsbyImage image={featuredImage.gatsbyImageData} alt={title} />
             </GridItem>
             <GridItem xs={7}>
               <Grid direction="column" gap="md" wrap="nowrap" fullHeight>
@@ -260,7 +260,7 @@ export const ProductBox = () => {
     <Box>
       <Grid gap={0}>
         <GridItem xs={12}>
-          <Img alt={title} fluid={featuredImage.fluid} />
+          <GatsbyImage image={featuredImage.gatsbyImageData} alt={title} />
         </GridItem>
         <GridItem xs={12}>
           <BoxBody>

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Block, BLOCKS, Inline, INLINES } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Grid, { GridProps } from "../../layout/Grid";
 import RichTextRow from "./RichTextRow";
 import RichTextHeading from "./RichTextHeading";
@@ -41,7 +41,7 @@ const RichTextBase = ({ richText, gap, options }: RichTextBaseProps) => {
         return (
           <Grid justify="center">
             <GridItem xs={9} sm={7}>
-              <Img {...node.data.target} />
+              <GatsbyImage {...node.data.target} />
             </GridItem>
           </Grid>
         );

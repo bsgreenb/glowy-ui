@@ -20,7 +20,7 @@ export default {
 
 const image = postFixture.featuredImage;
 
-const caption = "One hooper with lots of different hoop sizes.";
+const caption = "Burning Man at night, looks pretty fun.";
 
 export const NoCredit = () => {
   return <ImageWithCaption image={image} caption={caption} />;

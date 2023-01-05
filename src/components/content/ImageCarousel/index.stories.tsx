@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageCarousel from ".";
 import { Grid, GridItem } from "../..";
 import multiImageProductFixture from "../../../fixtures/multi-image-product-fixture";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default {
   component: ImageCarousel,
@@ -23,10 +23,12 @@ export const ProductImageCarousel = () => {
         <GridItem xs={12}>
           {images.map((image, i) => {
             const showImage = i == selectedImageIndex;
+            // FUTURE: dynamic alt text from contentful fields?
             return (
-              <Img
+              <GatsbyImage
+                alt=""
+                image={image.constrainedImageData}
                 key={i}
-                fluid={image.fluid}
                 style={{ display: showImage ? "block" : "none" }}
               />
             );
