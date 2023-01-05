@@ -22,7 +22,7 @@ const multiImageProductFixture = {
           sizes: "(min-width: 1000px) 1000px, 100vw",
         },
       },
-      layout: "constrained",
+      layout: "constrained" as Layout,
       backgroundColor: "#080808",
       width: 1000,
       height: 1000,

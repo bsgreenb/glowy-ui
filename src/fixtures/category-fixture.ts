@@ -21,7 +21,7 @@ const categoryFixture = {
           sizes: "(min-width: 600px) 600px, 100vw",
         },
       },
-      layout: "constrained",
+      layout: "constrained" as Layout,
       backgroundColor: "#080808",
       width: 600,
       height: 600,
