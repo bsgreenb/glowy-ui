@@ -27,7 +27,7 @@ export const ProductImageCarousel = () => {
             return (
               <GatsbyImage
                 alt=""
-                image={image.gatsbyImageData}
+                image={image.constrainedImageData}
                 key={i}
                 style={{ display: showImage ? "block" : "none" }}
               />

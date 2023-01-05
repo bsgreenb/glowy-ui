@@ -12,25 +12,22 @@ export default {
   component: ImageBox,
   title: "Content/ImageBox",
   subcomponents: { Overlay },
-  decorators: [
-    (storyFn: () => React.ReactNode) => (
-      <Container maxWidth="xs">{storyFn()}</Container>
-    ),
-  ],
 };
 
 export const CategoryImageBox = () => {
   const { title, featuredImage } = categoryFixture;
   return (
-    <ImageBox aspectRatio="square" alt={title} featuredImage={featuredImage}>
-      <Overlay align="center" justify="center" blackFade={30}>
-        <BackgroundContext.Provider value={{ bgColor: "dark" }}>
-          <H level={3} size="h1" textShadow>
-            {title}
-          </H>
-        </BackgroundContext.Provider>
-      </Overlay>
-    </ImageBox>
+    <Container maxWidth="xs">
+      <ImageBox aspectRatio="square" alt={title} featuredImage={featuredImage}>
+        <Overlay align="center" justify="center" blackFade={30}>
+          <BackgroundContext.Provider value={{ bgColor: "dark" }}>
+            <H level={3} size="h1" textShadow textAlign="center">
+              {title}
+            </H>
+          </BackgroundContext.Provider>
+        </Overlay>
+      </ImageBox>
+    </Container>
   );
 };
 
@@ -38,10 +35,12 @@ export const PostImageBox = () => {
   const { title, featuredImage } = postFixture;
 
   return (
-    <ImageBox aspectRatio="wide" alt={title} featuredImage={featuredImage}>
-      <Overlay blackFade={15} align="flex-end" justify="flex-end">
-        <CategoryBadge />
-      </Overlay>
-    </ImageBox>
+    <Container maxWidth="sm">
+      <ImageBox aspectRatio="wide" alt={title} featuredImage={featuredImage}>
+        <Overlay blackFade={15} align="flex-end" justify="flex-end">
+          <CategoryBadge />
+        </Overlay>
+      </ImageBox>
+    </Container>
   );
 };

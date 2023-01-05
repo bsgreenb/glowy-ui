@@ -7,7 +7,9 @@ import Grid from "../../layout/Grid";
 import GridItem from "../../layout/Grid/GridItem";
 
 type ImageCarouselProps = {
-  images: { gatsbyImageData: IGatsbyImageData }[];
+  images: { 
+    fixedImageData: IGatsbyImageData 
+  }[];
   setSelectedImageIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
@@ -73,7 +75,7 @@ const ImageCarousel = ({
             onEnter={imageSelect(i)}
             onLeave={imageDeselect}
           >
-            <GatsbyImage alt="" image={image.gatsbyImageData} />
+            <GatsbyImage alt="" image={image.fixedImageData} />
           </GridItem>
         );
       })}
