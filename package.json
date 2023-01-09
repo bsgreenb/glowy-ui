@@ -3,6 +3,7 @@
     "description": "Glowy UI",
     "version": "1.0.4",
     "author": "Ben Greenberg <ben@glowystuff.com>",
+    "private": true,
     "license": "MIT",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
