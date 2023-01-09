@@ -172,22 +172,22 @@ const postFixture = {
         sources: [
           {
             srcSet:
-              "https://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=136&h=77&q=50&fm=webp 136w,\nhttps://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=273&h=154&q=50&fm=webp 273w,\nhttps://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=545&h=307&q=50&fm=webp 545w",
-            sizes: "(min-width: 545px) 545px, 100vw",
+              "https://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=545&h=307&q=50&fm=webp 545w",
+            sizes: "100vw",
             type: "image/webp",
           },
         ],
         fallback: {
           src: "https://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=545&h=307&q=50&fm=png",
           srcSet:
-            "https://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=136&h=77&q=50&fm=png 136w,\nhttps://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=273&h=154&q=50&fm=png 273w,\nhttps://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=545&h=307&q=50&fm=png 545w",
-          sizes: "(min-width: 545px) 545px, 100vw",
+            "https://images.ctfassets.net/recq25x3mcro/4ULse6oFwqxvRWKx6Ma04U/e83767c8ea1c484c0123bddb325082da/big-burning-man.png?w=545&h=307&q=50&fm=png 545w",
+          sizes: "100vw",
         },
       },
-      layout: "constrained" as Layout,
+      layout: "fullWidth" as Layout,
       backgroundColor: "#080808",
-      width: 545,
-      height: 307,
+      width: 1,
+      height: 0.5633027522935781,
     },
   },
   category: {
