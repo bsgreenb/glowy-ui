@@ -19,7 +19,7 @@ export default {
 };
 
 export const Default = () => (
-  <Input onChange={action("changed")} placeholder="type here" />
+  <Input inputType="email" onChange={action("changed")} placeholder="type here" />
 );
 
 // TODO
@@ -36,6 +36,7 @@ export const FooterSubscribeForm = () => {
     <Grid alignItems="stretch" wrap="nowrap">
       <GridItem xs="auto" lg>
         <Input
+          inputType="email"
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your email"
         />
@@ -61,6 +62,7 @@ export const HeaderSubscribeForm = () => {
       {visibleInput ? (
         <GridItem xs>
           <Input
+            inputType="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email"
           />
