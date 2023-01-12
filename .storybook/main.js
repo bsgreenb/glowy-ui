@@ -18,9 +18,9 @@ module.exports = {
       /node_modules\/(?!(gatsby|gatsby-script)\/)/,
     ];
     // Use correct react-dom depending on React version.
-    if (parseInt(React.version) <= 18) {
-      config.externals = ["react-dom/client"];
-    }
+    // if (parseInt(React.version) <= 18) {
+    //   config.externals = ["react-dom/client"];
+    // }
     // Remove core-js to prevent issues with Storybook
     config.module.rules[0].exclude = [/core-js/];
     // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
