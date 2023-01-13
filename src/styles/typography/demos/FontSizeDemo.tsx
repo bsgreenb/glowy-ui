@@ -1,5 +1,5 @@
 import React from "react";
-import { Typeset } from "@storybook/addon-docs/blocks";
+import { Typeset } from "@storybook/addon-docs";
 import { fontFamily, fontSize, fontSizeBaseEm, fontWeight } from "..";
 import { emToPx, formatEm, formatPx } from "../../../utils";
 

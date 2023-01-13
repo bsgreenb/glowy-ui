@@ -1,7 +1,7 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { DocsContainer } from "@storybook/addon-docs/blocks";
+import { DocsContainer } from "@storybook/addon-docs";
 import H from "../src/components/content/Heading";
 import viewports from "./viewports";
 import { createGlobalStyle } from "styled-components";

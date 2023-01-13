@@ -6,7 +6,7 @@ import { BackgroundContext } from "../../layout/BackgroundProvider";
 import { AnalyticsContext } from "./AnalyticsProvider";
 
 type ExternalLinkProps = {
-  href: string;
+  href?: string;
   newTab?: boolean;
   analytics?: boolean;
   children: ReactNode;
@@ -29,7 +29,7 @@ const HoverNonAnalyticsLink = styled.a`
 const ExternalLink = ({
   color,
   hoverUnderlineColor,
-  href,
+  href ='', 
   newTab = false,
   children,
 }: ExternalLinkProps) => {
