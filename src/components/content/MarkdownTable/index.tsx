@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import styled from "styled-components";
 import { color } from "../../../styles/color";
 import { spacerSizeEm } from "../../../styles";
@@ -21,8 +20,8 @@ const MarkdownTableTd = styled.td`
   border: solid 1px ${color.gray74};
 `;
 type MarkdownLinkProps = {
-  children: ReactNode;
-  href: string;
+  children?: ReactNode; 
+  href?: string;
 };
 
 const MarkdownLink = ({ children, href }: MarkdownLinkProps) => {
@@ -46,7 +45,7 @@ const MarkdownTable = ({ children }: MarkdownTableProps) => {
         td: MarkdownTableTd,
       }}
     >
-      <MDXRenderer>{children}</MDXRenderer>
+      {children}
     </MDXProvider>
   );
 };
