@@ -7,6 +7,7 @@ import styled from "styled-components";
 
 // TODO: rename to be specific to Email
 type InputProps = {
+  inputType?: "text" | "email" | "password";
   onChange(event: ChangeEvent<HTMLInputElement>): void;
   placeholder?: string;
 };
@@ -24,9 +25,9 @@ const InputStyled = styled.input`
   }
 `;
 
-const Input = ({ onChange, placeholder }: InputProps) => {
+const Input = ({ inputType = "text", onChange, placeholder }: InputProps) => {
   return (
-    <InputStyled type="email" onChange={onChange} placeholder={placeholder} />
+    <InputStyled type={inputType} onChange={onChange} placeholder={placeholder} />
   );
 };
 
