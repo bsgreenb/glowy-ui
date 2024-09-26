@@ -12,6 +12,9 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  features: {
+    previewMdx2: true,
+  },
   webpackFinal: async (config) => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
     config.module.rules[0].exclude = [
